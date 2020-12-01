@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let day1 = Day1(inputFile: "input_day1")
+day1.solve()

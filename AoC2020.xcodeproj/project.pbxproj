@@ -8,23 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1D6B5D5725764F0600544B3C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D5625764F0600544B3C /* main.swift */; };
+		1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D6B5D602576504400544B3C /* input_day1.txt */; };
+		1D6B5D6C2576534E00544B3C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6B2576534E00544B3C /* Day.swift */; };
+		1D6B5D6F257653F100544B3C /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6E257653F100544B3C /* Day1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1D6B5D5125764F0600544B3C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D6B5D5325764F0600544B3C /* AoC2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AoC2020; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6B5D5625764F0600544B3C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1D6B5D602576504400544B3C /* input_day1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input_day1.txt; sourceTree = "<group>"; };
+		1D6B5D6B2576534E00544B3C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		1D6B5D6E257653F100544B3C /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,10 @@
 		1D6B5D5525764F0600544B3C /* AoC2020 */ = {
 			isa = PBXGroup;
 			children = (
+				1D6B5D602576504400544B3C /* input_day1.txt */,
 				1D6B5D5625764F0600544B3C /* main.swift */,
+				1D6B5D6B2576534E00544B3C /* Day.swift */,
+				1D6B5D6E257653F100544B3C /* Day1.swift */,
 			);
 			path = AoC2020;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6B5D6C2576534E00544B3C /* Day.swift in Sources */,
+				1D6B5D6F257653F100544B3C /* Day1.swift in Sources */,
 				1D6B5D5725764F0600544B3C /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = VDQPC346U9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -256,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = VDQPC346U9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
