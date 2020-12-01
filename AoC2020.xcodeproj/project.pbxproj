@@ -11,7 +11,6 @@
 		1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D6B5D602576504400544B3C /* input_day1.txt */; };
 		1D6B5D6C2576534E00544B3C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6B2576534E00544B3C /* Day.swift */; };
 		1D6B5D6F257653F100544B3C /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6E257653F100544B3C /* Day1.swift */; };
-		B050740B92641591CB66B67A /* Pods_AoC2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80BB213A46A5A6FF7C9EEB7 /* Pods_AoC2020.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,14 +27,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00AE815FC0DF4B788D4D0B7D /* Pods-AoC2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AoC2020.release.xcconfig"; path = "Target Support Files/Pods-AoC2020/Pods-AoC2020.release.xcconfig"; sourceTree = "<group>"; };
 		1D6B5D5325764F0600544B3C /* AoC2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AoC2020; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6B5D5625764F0600544B3C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1D6B5D602576504400544B3C /* input_day1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input_day1.txt; sourceTree = "<group>"; };
 		1D6B5D6B2576534E00544B3C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		1D6B5D6E257653F100544B3C /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
-		548A6CA7710AFB76331BB758 /* Pods-AoC2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AoC2020.debug.xcconfig"; path = "Target Support Files/Pods-AoC2020/Pods-AoC2020.debug.xcconfig"; sourceTree = "<group>"; };
-		A80BB213A46A5A6FF7C9EEB7 /* Pods_AoC2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AoC2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,30 +39,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B050740B92641591CB66B67A /* Pods_AoC2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12202E70EB8FC03EE27B4C72 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				548A6CA7710AFB76331BB758 /* Pods-AoC2020.debug.xcconfig */,
-				00AE815FC0DF4B788D4D0B7D /* Pods-AoC2020.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		1D6B5D4A25764F0600544B3C = {
 			isa = PBXGroup;
 			children = (
 				1D6B5D5525764F0600544B3C /* AoC2020 */,
 				1D6B5D5425764F0600544B3C /* Products */,
-				12202E70EB8FC03EE27B4C72 /* Pods */,
-				977781D45C895C833D3C0CFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,14 +72,6 @@
 			path = AoC2020;
 			sourceTree = "<group>";
 		};
-		977781D45C895C833D3C0CFD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A80BB213A46A5A6FF7C9EEB7 /* Pods_AoC2020.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,7 +79,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6B5D5A25764F0600544B3C /* Build configuration list for PBXNativeTarget "AoC2020" */;
 			buildPhases = (
-				16EE02F957F3EBE80C7BBD1A /* [CP] Check Pods Manifest.lock */,
 				1D6B5D4F25764F0600544B3C /* Sources */,
 				1D6B5D5025764F0600544B3C /* Frameworks */,
 				1D6B5D5125764F0600544B3C /* CopyFiles */,
@@ -149,31 +123,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		16EE02F957F3EBE80C7BBD1A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AoC2020-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D6B5D4F25764F0600544B3C /* Sources */ = {
@@ -306,7 +255,6 @@
 		};
 		1D6B5D5B25764F0600544B3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 548A6CA7710AFB76331BB758 /* Pods-AoC2020.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -319,7 +267,6 @@
 		};
 		1D6B5D5C25764F0600544B3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00AE815FC0DF4B788D4D0B7D /* Pods-AoC2020.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
