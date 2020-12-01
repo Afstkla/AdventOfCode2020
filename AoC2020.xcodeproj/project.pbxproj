@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D213DAE25765BA80012B9F3 /* SwifterSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D213DAD25765BA80012B9F3 /* SwifterSwift.framework */; };
 		1D6B5D5725764F0600544B3C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D5625764F0600544B3C /* main.swift */; };
 		1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D6B5D602576504400544B3C /* input_day1.txt */; };
 		1D6B5D6C2576534E00544B3C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6B2576534E00544B3C /* Day.swift */; };
@@ -39,12 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
+=======
+				1D213DAE25765BA80012B9F3 /* SwifterSwift.framework in Frameworks */,
+				B050740B92641591CB66B67A /* Pods_AoC2020.framework in Frameworks */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< Updated upstream
+=======
+		12202E70EB8FC03EE27B4C72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				548A6CA7710AFB76331BB758 /* Pods-AoC2020.debug.xcconfig */,
+				00AE815FC0DF4B788D4D0B7D /* Pods-AoC2020.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+>>>>>>> Stashed changes
 		1D6B5D4A25764F0600544B3C = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +90,18 @@
 			path = AoC2020;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
+=======
+		977781D45C895C833D3C0CFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D213DAD25765BA80012B9F3 /* SwifterSwift.framework */,
+				A80BB213A46A5A6FF7C9EEB7 /* Pods_AoC2020.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+>>>>>>> Stashed changes
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */

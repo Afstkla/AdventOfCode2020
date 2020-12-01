@@ -14,15 +14,16 @@ class Day {
     
     init(inputFile: String) {
         if let fileURL = Bundle.main.url(forResource: inputFile, withExtension: "txt") {
-            // we found the file in our bundle!
             if let fileContents = try? String(contentsOf: fileURL) {
-                // we loaded the file into a string!
                 inputString = fileContents
-                
-//                let numbers = fileContents.split(separator: "\n").map { Int($0)! }.sorted(by: <)
-                
-//                getSolution1a(numbers: numbers)
-//                getSolution1b(numbers: numbers)
+            } else {
+                fatalError("Couldn't get string from inputfile")
+            }
+        } else {
+            if inputFile == "" {
+                print("No input file given. Are you sure?")
+            } else {
+                fatalError("Couldn't find \(inputFile) in Resources")
             }
         }
     }
