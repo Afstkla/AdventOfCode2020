@@ -28,6 +28,8 @@ class Day {
         }
     }
     
+    init() { }
+    
     func part1() -> String {
         fatalError("\(#function) not implemented")
     }
