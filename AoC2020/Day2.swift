@@ -8,7 +8,7 @@
 import Foundation
 
 class Day2: Day {
-    override var dayIndex: Int { get { 1 } set {}}
+    override var dayIndex: Int { get { 2 } set {}}
 
     override func part1() -> String {
         let lines = inputString.split(separator: "\n")
