@@ -52,9 +52,7 @@ class Day2: Day {
         
         let charToFind = String(answerParts[1][0])
         
-        let test1 = String(answerParts[2][idx1 - 1]) == charToFind
-        let test2 = String(answerParts[2][idx2 - 1]) == charToFind
-        if ((test1) || (test2)) && (test1 != test2) {
+        if ((String(answerParts[2][idx1 - 1]) == charToFind) ^ (String(answerParts[2][idx2 - 1]) == charToFind)) {
             return true
         }
         

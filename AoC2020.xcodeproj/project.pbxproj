@@ -116,6 +116,8 @@
 		1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D6B5D602576504400544B3C /* input_day1.txt */; };
 		1D6B5D6C2576534E00544B3C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6B2576534E00544B3C /* Day.swift */; };
 		1D6B5D6F257653F100544B3C /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6E257653F100544B3C /* Day1.swift */; };
+		1D7BBE432578BE1F00E5C58C /* input-3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7BBE422578BE1400E5C58C /* input-3.txt */; };
+		1D7BBE462578BE2A00E5C58C /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BBE452578BE2A00E5C58C /* Day3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,6 +127,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1D7BBE432578BE1F00E5C58C /* input-3.txt in CopyFiles */,
 				1D0D72022577639A00BF4D2E /* input_day2.txt in CopyFiles */,
 				1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */,
 			);
@@ -243,6 +246,8 @@
 		1D6B5D602576504400544B3C /* input_day1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input_day1.txt; sourceTree = "<group>"; };
 		1D6B5D6B2576534E00544B3C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		1D6B5D6E257653F100544B3C /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		1D7BBE422578BE1400E5C58C /* input-3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-3.txt"; sourceTree = "<group>"; };
+		1D7BBE452578BE2A00E5C58C /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,8 +521,10 @@
 				1D213DB325765D600012B9F3 /* SwifterSwift */,
 				1D6B5D602576504400544B3C /* input_day1.txt */,
 				1D0D72012577638400BF4D2E /* input_day2.txt */,
+				1D7BBE422578BE1400E5C58C /* input-3.txt */,
 				1D6B5D5625764F0600544B3C /* main.swift */,
 				1D0D71FE2577634F00BF4D2E /* Day2.swift */,
+				1D7BBE452578BE2A00E5C58C /* Day3.swift */,
 				1D6B5D6B2576534E00544B3C /* Day.swift */,
 				1D6B5D6E257653F100544B3C /* Day1.swift */,
 			);
@@ -660,6 +667,7 @@
 				1D213E5D25765D6E0012B9F3 /* DecodableExtensions.swift in Sources */,
 				1D213E5C25765D6E0012B9F3 /* StringExtensions.swift in Sources */,
 				1D213E8025765D6E0012B9F3 /* UIImageExtensions.swift in Sources */,
+				1D7BBE462578BE2A00E5C58C /* Day3.swift in Sources */,
 				1D213E6F25765D6E0012B9F3 /* UISearchBarExtensions.swift in Sources */,
 				1D213E8425765D6E0012B9F3 /* UIWindowExtensions.swift in Sources */,
 				1D213E4925765D6E0012B9F3 /* NotificationCenterExtensions.swift in Sources */,

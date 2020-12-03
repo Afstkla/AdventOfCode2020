@@ -20,4 +20,8 @@ public extension Bool {
     var string: String {
         return self ? "true" : "false"
     }
+    
+    static func ^(lhs: Bool, rhs: Bool) -> Bool {
+        return (lhs || rhs) && (lhs != rhs)
+    }
 }
