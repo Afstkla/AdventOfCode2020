@@ -22,12 +22,17 @@ class Day3: Day {
     
     override func part2() -> String {
         String([(1,1), (3,1), (5,1), (7,1), (1,2)].reduce(1) { (previousResult, newValue) in
-            let trees = puzzleGrid.indices.filter { (idx) in
+            puzzleGrid.indices.filter { (idx) in
                 let somehowIfIDontUseThisVariableTheCompilerComplains = (idx % newValue.1) == 0 && puzzleGrid[idx][((idx / newValue.1) * newValue.0) % puzzleGrid[idx].count] == "#"
                 return somehowIfIDontUseThisVariableTheCompilerComplains
-            }
+            }.count * previousResult
             
-            return previousResult * trees.count
+            /*
+             This would've been even nicer, but I keep getting "The compiler is unable to type-check this expression in reasonable time. Try breaking up the expression into distinct sub-expressions
+             puzzleGrid.indices.filter {
+                 ($0 % newValue.1) == 0 && puzzleGrid[$0][(($0 / newValue.1) * newValue.0) % puzzleGrid[$0].count] == "#"
+             }.count * previousResult
+             */
         })
     }
     
