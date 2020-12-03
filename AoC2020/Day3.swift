@@ -17,19 +17,18 @@ class Day3: Day {
     }
 
     override func part1() -> String {
-        return "\(puzzleGrid.indices.filter { puzzleGrid[$0][($0 * 3) % puzzleGrid[$0].count] == "#" }.count)"
+        String(puzzleGrid.indices.filter { puzzleGrid[$0][($0 * 3) % puzzleGrid[$0].count] == "#" }.count)
     }
     
     override func part2() -> String {
-        let multiplier = ([(1,1), (3,1), (5,1), (7,1), (1,2)].reduce(1) { (result, newValue) in
+        String([(1,1), (3,1), (5,1), (7,1), (1,2)].reduce(1) { (previousResult, newValue) in
             let trees = puzzleGrid.indices.filter { (idx) in
                 let somehowIfIDontUseThisVariableTheCompilerComplains = (idx % newValue.1) == 0 && puzzleGrid[idx][((idx / newValue.1) * newValue.0) % puzzleGrid[idx].count] == "#"
                 return somehowIfIDontUseThisVariableTheCompilerComplains
             }
             
-            return result * trees.count
+            return previousResult * trees.count
         })
-        return "\(multiplier)"
     }
     
     override func solve() {
