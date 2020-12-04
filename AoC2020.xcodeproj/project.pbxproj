@@ -118,6 +118,8 @@
 		1D6B5D6F257653F100544B3C /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6E257653F100544B3C /* Day1.swift */; };
 		1D7BBE432578BE1F00E5C58C /* input-3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7BBE422578BE1400E5C58C /* input-3.txt */; };
 		1D7BBE462578BE2A00E5C58C /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BBE452578BE2A00E5C58C /* Day3.swift */; };
+		1DD185A7257A1AB900DE3EFB /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD185A6257A1AB900DE3EFB /* Day4.swift */; };
+		1DD185AA257A1B0A00DE3EFB /* input-4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DD185A9257A1AFE00DE3EFB /* input-4.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +129,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1DD185AA257A1B0A00DE3EFB /* input-4.txt in CopyFiles */,
 				1D7BBE432578BE1F00E5C58C /* input-3.txt in CopyFiles */,
 				1D0D72022577639A00BF4D2E /* input_day2.txt in CopyFiles */,
 				1D6B5D672576511900544B3C /* input_day1.txt in CopyFiles */,
@@ -248,6 +251,8 @@
 		1D6B5D6E257653F100544B3C /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		1D7BBE422578BE1400E5C58C /* input-3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-3.txt"; sourceTree = "<group>"; };
 		1D7BBE452578BE2A00E5C58C /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		1DD185A6257A1AB900DE3EFB /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		1DD185A9257A1AFE00DE3EFB /* input-4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-4.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,11 +527,13 @@
 				1D6B5D602576504400544B3C /* input_day1.txt */,
 				1D0D72012577638400BF4D2E /* input_day2.txt */,
 				1D7BBE422578BE1400E5C58C /* input-3.txt */,
+				1DD185A9257A1AFE00DE3EFB /* input-4.txt */,
 				1D6B5D5625764F0600544B3C /* main.swift */,
+				1D6B5D6E257653F100544B3C /* Day1.swift */,
 				1D0D71FE2577634F00BF4D2E /* Day2.swift */,
 				1D7BBE452578BE2A00E5C58C /* Day3.swift */,
+				1DD185A6257A1AB900DE3EFB /* Day4.swift */,
 				1D6B5D6B2576534E00544B3C /* Day.swift */,
-				1D6B5D6E257653F100544B3C /* Day1.swift */,
 			);
 			path = AoC2020;
 			sourceTree = "<group>";
@@ -603,6 +610,7 @@
 				1D213E6B25765D6E0012B9F3 /* CGAffineTransformExtensions.swift in Sources */,
 				1D213E7525765D6E0012B9F3 /* UIStackViewExtensions.swift in Sources */,
 				1D213E8D25765D6E0012B9F3 /* UIDatePickerExtensions.swift in Sources */,
+				1DD185A7257A1AB900DE3EFB /* Day4.swift in Sources */,
 				1D213E7125765D6E0012B9F3 /* UIScrollViewExtensions.swift in Sources */,
 				1D213E8925765D6E0012B9F3 /* UIImageViewExtensions.swift in Sources */,
 				1D213E3325765D6E0012B9F3 /* FontExtensions.swift in Sources */,
