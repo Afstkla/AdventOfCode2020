@@ -118,6 +118,8 @@
 		1D6B5D6F257653F100544B3C /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6E257653F100544B3C /* Day1.swift */; };
 		1D7BBE432578BE1F00E5C58C /* input-3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7BBE422578BE1400E5C58C /* input-3.txt */; };
 		1D7BBE462578BE2A00E5C58C /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BBE452578BE2A00E5C58C /* Day3.swift */; };
+		1DAD89B9257B79CE00664F29 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD89B8257B79CE00664F29 /* Day5.swift */; };
+		1DAD89BC257B7A2500664F29 /* input-5.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DAD89BB257B7A0C00664F29 /* input-5.txt */; };
 		1DD185A7257A1AB900DE3EFB /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD185A6257A1AB900DE3EFB /* Day4.swift */; };
 		1DD185AA257A1B0A00DE3EFB /* input-4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DD185A9257A1AFE00DE3EFB /* input-4.txt */; };
 /* End PBXBuildFile section */
@@ -129,6 +131,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1DAD89BC257B7A2500664F29 /* input-5.txt in CopyFiles */,
 				1DD185AA257A1B0A00DE3EFB /* input-4.txt in CopyFiles */,
 				1D7BBE432578BE1F00E5C58C /* input-3.txt in CopyFiles */,
 				1D0D72022577639A00BF4D2E /* input_day2.txt in CopyFiles */,
@@ -251,6 +254,8 @@
 		1D6B5D6E257653F100544B3C /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		1D7BBE422578BE1400E5C58C /* input-3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-3.txt"; sourceTree = "<group>"; };
 		1D7BBE452578BE2A00E5C58C /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		1DAD89B8257B79CE00664F29 /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		1DAD89BB257B7A0C00664F29 /* input-5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "input-5.txt"; path = "../../../../Downloads/input-5.txt"; sourceTree = "<group>"; };
 		1DD185A6257A1AB900DE3EFB /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		1DD185A9257A1AFE00DE3EFB /* input-4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-4.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -528,11 +533,13 @@
 				1D0D72012577638400BF4D2E /* input_day2.txt */,
 				1D7BBE422578BE1400E5C58C /* input-3.txt */,
 				1DD185A9257A1AFE00DE3EFB /* input-4.txt */,
+				1DAD89BB257B7A0C00664F29 /* input-5.txt */,
 				1D6B5D5625764F0600544B3C /* main.swift */,
 				1D6B5D6E257653F100544B3C /* Day1.swift */,
 				1D0D71FE2577634F00BF4D2E /* Day2.swift */,
 				1D7BBE452578BE2A00E5C58C /* Day3.swift */,
 				1DD185A6257A1AB900DE3EFB /* Day4.swift */,
+				1DAD89B8257B79CE00664F29 /* Day5.swift */,
 				1D6B5D6B2576534E00544B3C /* Day.swift */,
 			);
 			path = AoC2020;
@@ -641,6 +648,7 @@
 				1D213E5225765D6E0012B9F3 /* ComparableExtensions.swift in Sources */,
 				1D213E8F25765D6E0012B9F3 /* CAGradientLayerExtensions.swift in Sources */,
 				1D213E5A25765D6E0012B9F3 /* SignedNumericExtensions.swift in Sources */,
+				1DAD89B9257B79CE00664F29 /* Day5.swift in Sources */,
 				1D213E4425765D6E0012B9F3 /* NSRegularExpressionExtensions.swift in Sources */,
 				1D213E6525765D6E0012B9F3 /* CollectionExtensions.swift in Sources */,
 				1D213E8825765D6E0012B9F3 /* UIApplicationExtensions.swift in Sources */,
