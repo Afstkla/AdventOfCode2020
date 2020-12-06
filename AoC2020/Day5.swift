@@ -8,6 +8,8 @@
 import Foundation
 
 class Day5: Day {
+    override var dayIndex: Int { get { 5 } set {}}
+
     var seatIDs = [Int]()
     
     func prepareInput() {
