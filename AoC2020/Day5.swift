@@ -12,7 +12,7 @@ class Day5: Day {
 
     var seatIDs = [Int]()
     
-    func prepareInput() {
+    override func prepareInput() {
         let boardingPasses = inputString.split(separator: "\n").map { String($0) }
         
         boardingPasses.forEach {
@@ -38,11 +38,5 @@ class Day5: Day {
         }
         
         return "NOT FOUND"
-    }
-    
-    override func solve() {
-        prepareInput()
-        
-        super.solve()
     }
 }

@@ -9,10 +9,14 @@ import Foundation
 
 class Day4: Day {
     override var dayIndex: Int { get { 4 } set {}}
+    
+    var passports = [String]()
+    
+    override func prepareInput() {
+        passports = inputString.components(separatedBy: ["\n\n"])
+    }
 
     override func part1() -> String {
-        let passports = inputString.components(separatedBy: ["\n\n"])
-        
         return String(passports.filter { isValidPasswordWithoutCID(str: $0) }.count)
     }
     
@@ -122,8 +126,6 @@ class Day4: Day {
     }
     
     override func part2() -> String {
-        let passports = inputString.components(separatedBy: ["\n\n"])
-
         let passportsWithCID = passports.filter { isValidPasswordWithoutCID(str: $0) }
         
         return String(passportsWithCID.filter { hasValidPasswordProperties(str: $0) }.count)

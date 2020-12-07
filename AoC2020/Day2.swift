@@ -9,10 +9,14 @@ import Foundation
 
 class Day2: Day {
     override var dayIndex: Int { get { 2 } set {}}
+    
+    var lines = [String]()
+    
+    override func prepareInput() {
+        lines = inputString.split(separator: "\n").map { String($0) }
+    }
 
     override func part1() -> String {
-        let lines = inputString.split(separator: "\n")
-        
         var numberOfValidPasswords = 0
         for line in lines {
             if isValidPassword(line: String(line)) {
@@ -60,8 +64,6 @@ class Day2: Day {
     }
     
     override func part2() -> String {
-        let lines = inputString.split(separator: "\n")
-        
         var numberOfValidPasswords = 0
         for line in lines {
             if isValidPolicy2Password(line: String(line)) {

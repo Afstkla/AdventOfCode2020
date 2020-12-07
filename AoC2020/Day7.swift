@@ -17,7 +17,7 @@ class Day7: Day {
     
     var bagContains = [Bag: [Bag]]()
     
-    func prepareInput() {
+    override func prepareInput() {
         func getBag(from str: String) -> Bag {
             let bagStuff = str.trimmed.split(separator: " ")
             
@@ -81,11 +81,5 @@ class Day7: Day {
     
     override func part2() -> String {
         return String(getNumBags(bagName: "shiny gold") - 1) // -1 to remove "shiny gold"
-    }
-    
-    override func solve() {
-        prepareInput()
-        
-        super.solve()
     }
 }

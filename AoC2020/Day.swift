@@ -8,9 +8,10 @@
 import Foundation
 
 class Day {
-    var solveFunc: (() -> Void)?
     var inputString = ""
     var dayIndex = -1
+    
+    func prepareInput() { return }
     
     init(inputFile: String) {
         if let fileURL = Bundle.main.url(forResource: inputFile, withExtension: "txt") {
@@ -39,12 +40,11 @@ class Day {
     }
     
     func solve() {
+        prepareInput()
+        
         print("Solution for day \(dayIndex):")
-        if let solveFunc = solveFunc {
-            solveFunc()
-        } else {
-            print("\ta: \(part1())")
-            print("\tb: \(part2())")
-        }
+        
+        print("\ta: \(part1())")
+        print("\tb: \(part2())")
     }
 }

@@ -11,8 +11,7 @@ class Day3: Day {
     override var dayIndex: Int { get { 3 } set {}}
     
     var puzzleGrid = [String]()
-    
-    func makePuzzleGrid() {
+    func prepareInput() {
         puzzleGrid = inputString.split(separator: "\n").map { String($0) }
     }
 
@@ -34,11 +33,5 @@ class Day3: Day {
              }.count * previousResult
              */
         })
-    }
-    
-    override func solve() {
-        makePuzzleGrid()
-        
-        super.solve()
     }
 }
