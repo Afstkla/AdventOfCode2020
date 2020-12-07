@@ -58,9 +58,8 @@ class Day7: Day {
     func getOuter(bagName: String) -> [String] {
         var allOuterBags = [bagName]
         
-        let outerBags = bagContains.filter { $0.value.map { $0.name}.contains(bagName) }.map { $0.key }
-        for outerBag in outerBags {
-            allOuterBags.append(contentsOf: getOuter(bagName: outerBag.name))
+        bagContains.filter { $0.value.map { $0.name}.contains(bagName) }.map { $0.key }.forEach {
+            allOuterBags.append(contentsOf: getOuter(bagName: $0.name))
         }
         
         return allOuterBags
@@ -69,9 +68,8 @@ class Day7: Day {
     func getNumBags(bagName: String) -> Int {
         var bagCount = 1
         
-        let innerBags = bagContains.filter { $0.key.name == bagName }.map { $0.value }
-        for innerBag in innerBags.flatMap({ $0 }) {
-            bagCount += (getNumBags(bagName: innerBag.name) * innerBag.count!)
+        bagContains.filter { $0.key.name == bagName }.map { $0.value }.flatMap { $0 }.forEach {
+            bagCount += (getNumBags(bagName: $0.name) * $0.count!)
         }
         
         return bagCount
