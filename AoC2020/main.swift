@@ -10,6 +10,6 @@ import Foundation
 let daySolveStart = Date()
 //let day1 = Day1(inputFile: "input_day1")
 //day1.solve()
-let day = Day7(inputFile: "input-7")
+let day = Day8(inputFile: "input-8")
 day.solve()
 print("Solve time: \(Date().timeIntervalSince(daySolveStart) * 1000)ms")
