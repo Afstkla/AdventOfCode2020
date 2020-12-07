@@ -18,6 +18,19 @@ class Day7: Day {
     var bagContains = [Bag: [Bag]]()
     
     func prepareInput() {
+        func getBag(from str: String) -> Bag {
+            let bagStuff = str.trimmed.split(separator: " ")
+            
+            var cnt: Int? = nil
+            if let count = Int(bagStuff[0]) {
+                cnt = count
+            }
+            
+            let bagName = String(bagStuff[cnt == nil ? 0 : 1] + " " + bagStuff[cnt == nil ? 1 : 2])
+            
+            return Bag(name: bagName.trimmed, count: cnt)
+        }
+        
         let bagRows = inputString.lines()
         
         for bagRow in bagRows {
@@ -42,19 +55,6 @@ class Day7: Day {
         }
     }
     
-    func getBag(from str: String) -> Bag {
-        let bagStuff = str.trimmed.split(separator: " ")
-        
-        var cnt: Int? = nil
-        if let count = Int(bagStuff[0]) {
-            cnt = count
-        }
-        
-        let bagName = String(bagStuff[cnt == nil ? 0 : 1] + " " + bagStuff[cnt == nil ? 1 : 2])
-        
-        return Bag(name: bagName.trimmed, count: cnt)
-    }
-    
     func getOuter(bagName: String) -> [String] {
         var allOuterBags = [bagName]
         
@@ -76,8 +76,6 @@ class Day7: Day {
         
         return bagCount
     }
-    
-    var allBagsWithMyBag = [Bag]()
     
     override func part1() -> String {
         return String(Set(getOuter(bagName: "shiny gold")).count - 1) // -1 to remove "shiny gold"
