@@ -61,6 +61,14 @@ class DayComputer: Day {
         }
     }
     
+    func runProgram() {
+        resetComputer()
+        
+        while pc < instructions.count {
+            handle(instr: instructions[pc])
+        }
+    }
+    
     func resetComputer() {
         pc = 0
         accumulator = 0
