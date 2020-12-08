@@ -7,9 +7,11 @@
 
 import Foundation
 
-let daySolveStart = Date()
-//let day1 = Day1(inputFile: "input_day1")
-//day1.solve()
-let day = Day8(inputFile: "input-8")
-day.solve()
-print("Solve time: \(Date().timeIntervalSince(daySolveStart) * 1000)ms")
+//Day1(inputFile: "input_day1").solve()
+//Day2(inputFile: "input_day2").solve()
+//Day3(inputFile: "input-3").solve()
+//Day4(inputFile: "input-4").solve()
+//Day5(inputFile: "input-5").solve()
+//Day6(inputFile: "input-6").solve()
+//Day7(inputFile: "input-7").solve()
+Day8(inputFile: "input-8").solve()

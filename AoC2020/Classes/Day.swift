@@ -40,11 +40,22 @@ class Day {
     }
     
     func solve() {
+        print("======== Day \(dayIndex) Solution ========")
+        let daySolveStart = Date()
         prepareInput()
+        let inputPrepareTime = Date()
         
-        print("Solution for day \(dayIndex):")
+        print("\(dayIndex)a: \(part1())")
+        let aSolveTime = Date()
+        print("\(dayIndex)b: \(part2())")
+        let bSolvetime = Date()
         
-        print("\ta: \(part1())")
-        print("\tb: \(part2())")
+        print("====== Performance Metrics ======")
+        print("Input prepared in: \(inputPrepareTime.timeIntervalSince(daySolveStart) * 1000)ms")
+        print("a solved in \(aSolveTime.timeIntervalSince(inputPrepareTime) * 1000)")
+        print("b solved in \(bSolvetime.timeIntervalSince(aSolveTime) * 1000)")
+        print("Total solve time: \(bSolvetime.timeIntervalSince(daySolveStart) * 1000)")
+        print()
+        print()
     }
 }

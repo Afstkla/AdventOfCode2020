@@ -11,7 +11,7 @@ class Day3: Day {
     override var dayIndex: Int { get { 3 } set {}}
     
     var puzzleGrid = [String]()
-    func prepareInput() {
+    override func prepareInput() {
         puzzleGrid = inputString.split(separator: "\n").map { String($0) }
     }
 
