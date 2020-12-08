@@ -558,7 +558,6 @@
 				1DCD3C56257E4F0400FBA5CA /* Days */,
 				1D213DB325765D600012B9F3 /* SwifterSwift */,
 				1D6B5D5625764F0600544B3C /* main.swift */,
-				1D2FB4A3257F6FC90014A0E1 /* Classes */,
 			);
 			path = AoC2020;
 			sourceTree = "<group>";
@@ -581,6 +580,7 @@
 		1DCD3C56257E4F0400FBA5CA /* Days */ = {
 			isa = PBXGroup;
 			children = (
+				1D2FB4A3257F6FC90014A0E1 /* Classes */,
 				1D6B5D6E257653F100544B3C /* Day1.swift */,
 				1D0D71FE2577634F00BF4D2E /* Day2.swift */,
 				1D7BBE452578BE2A00E5C58C /* Day3.swift */,
