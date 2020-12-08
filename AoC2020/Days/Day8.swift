@@ -27,7 +27,7 @@ class Day8: DayComputer {
     override func part1() -> String {
         while pcVisited[pc] == nil {
             pcVisited[pc] = true
-            handle(instr: instructions[pc])
+            step()
         }
         
         return String(accumulator)
@@ -50,7 +50,7 @@ class Day8: DayComputer {
             
             while pcVisited[pc] == nil && pc < instructions.count {
                 pcVisited[pc] = true
-                handle(instr: instructions[pc])
+                step()
             }
             
             // If we actually ended not because of a loop, but because we reached the end of the program

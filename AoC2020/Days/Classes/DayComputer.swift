@@ -49,7 +49,8 @@ class DayComputer: Day {
         return Instruction(type: type, argument: argument)
     }
     
-    func handle(instr: Instruction) {
+    func step() {
+        let instr = instructions[pc]
         switch instr.type {
         case .acc:
             accumulator += instr.argument
@@ -65,7 +66,7 @@ class DayComputer: Day {
         resetComputer()
         
         while pc < instructions.count {
-            handle(instr: instructions[pc])
+            step()
         }
     }
     
