@@ -15,4 +15,4 @@ import Foundation
 //Day6(inputFile: "input-6").solve()      // 6703,        3430
 //Day7(inputFile: "input-7").solve()      // 337,         50100
 //Day8(inputFile: "input-8").solve()      // 1394,        1626
-//Day9(inputFile: "input-9").solve()
+Day9(inputFile: "input-9").solve()      // 177777905,   23463012

@@ -52,9 +52,9 @@ class Day {
         
         print("====== Performance Metrics ======")
         print("Input prepared in: \(inputPrepareTime.timeIntervalSince(daySolveStart) * 1000)ms")
-        print("a solved in \(aSolveTime.timeIntervalSince(inputPrepareTime) * 1000)")
-        print("b solved in \(bSolvetime.timeIntervalSince(aSolveTime) * 1000)")
-        print("Total solve time: \(bSolvetime.timeIntervalSince(daySolveStart) * 1000)")
+        print("a solved in \(aSolveTime.timeIntervalSince(inputPrepareTime) * 1000)ms")
+        print("b solved in \(bSolvetime.timeIntervalSince(aSolveTime) * 1000)ms")
+        print("Total solve time: \(bSolvetime.timeIntervalSince(daySolveStart) * 1000)ms")
         print()
         print()
     }
