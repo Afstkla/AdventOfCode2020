@@ -88,10 +88,8 @@ class Day10: Day {
             // Split by tiny jumps
             $0.count - 1
         }.reduce(1) { res, newValue in
-            // Calculate something. Not sure the calculation is right, but brute forcing lengths 1 through 4 and then throwing that at oeis.org gave this as one of the possible results with {1, 2, 4, 7}
-            // https://oeis.org/A000124
-            let somehowIfIDontUseThisVariableTheCompilerComplains = res * (newValue * (newValue + 1) / 2 + 1)
-            return somehowIfIDontUseThisVariableTheCompilerComplains
+            let somehowIfIDontUseThisVariableTheCompilerComplains = Int(pow(2, Double(newValue)) - floor(pow(3, Double(newValue - 3))))
+            return somehowIfIDontUseThisVariableTheCompilerComplains * res
         }
         
         return String(splits)
