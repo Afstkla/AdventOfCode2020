@@ -61,13 +61,15 @@ class Day10: Day {
     var numbers = [Int]()
     var differences = [Int]()
     
-    func tribonnaci(n: Int) -> Int {
+    var tribonacciCache = [0, 0, 1]
+    
+    func tribonacci(n: Int) -> Int {
         if n <= 1 {
             return 0
         } else if n == 2 {
             return 1
         } else {
-            return tribonnaci(n: n - 1) + tribonnaci(n: n - 2) + tribonnaci(n: n - 3)
+            return tribonacci(n: n - 1) + tribonacci(n: n - 2) + tribonacci(n: n - 3)
         }
     }
     
@@ -75,10 +77,7 @@ class Day10: Day {
         numbers = [0] + inputString.components(separatedBy: .newlines).compactMap(Int.init).sorted(by: <)
         numbers.append(numbers.max()! + 3)
         
-        differences = numbers[1..<numbers.count].enumerated().map {
-            // Differences
-            $1 - numbers[$0]
-        }
+        differences = numbers[1..<numbers.count].enumerated().map { $1 - numbers[$0] }
     }
     
     override func part1() -> String {
@@ -86,7 +85,7 @@ class Day10: Day {
     }
     
     override func part2() -> String {
-        String(differences.split(separator: 3).map { $0.count }.reduce(1) { tribonnaci(n: $1 + 2) * $0 })
+        String(differences.split(separator: 3).map { $0.count }.reduce(1) { tribonacci(n: $1 + 2) * $0 })
     }
 }
 
