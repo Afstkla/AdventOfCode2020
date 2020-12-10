@@ -61,6 +61,16 @@ class Day10: Day {
     var numbers = [Int]()
     var differences = [Int]()
     
+    func tribonnaci(n: Int) -> Int {
+        if n <= 1 {
+            return 0
+        } else if n == 2 {
+            return 1
+        } else {
+            return tribonnaci(n: n - 1) + tribonnaci(n: n - 2) + tribonnaci(n: n - 3)
+        }
+    }
+    
     override func prepareInput() {
         numbers = [0] + inputString.components(separatedBy: .newlines).compactMap(Int.init).sorted(by: <)
         numbers.append(numbers.max()! + 3)
@@ -75,26 +85,8 @@ class Day10: Day {
         String(differences.filter { $0 == 1 }.count * differences.filter { $0 == 3 }.count)
     }
     
-    func tribonnaci(n: Int) -> Int {
-        if n <= 1 {
-            return 0
-        } else if n == 2 {
-            return 1
-        } else {
-            return tribonnaci(n: n - 1) + tribonnaci(n: n - 2) + tribonnaci(n: n - 3)
-        }
-    }
-    
     override func part2() -> String {
-        String(differences.split(separator: 3).map {
-            // We're only interested in the number of consecutive 1's
-            $0.count
-        }.reduce(1) {
-            // We have a list of numbers 0, 1, 2, ..., n, n + 3
-            // Possible arrangements are 2^(n - 1) if the maximum jump size wouldn't be 3. With the maximum jump size 3, it starts to affect the result starting at n = 4 (as we can't remove all 1..<n-1 values, as that'd give a jump of 4)
-            // To solve this, we use the tribonacci sequence (Fibonaci's big brother)
-            tribonnaci(n: $1 + 2) * $0
-        })
+        String(differences.split(separator: 3).map { $0.count }.reduce(1) { tribonnaci(n: $1 + 2) * $0 })
     }
 }
 
