@@ -77,7 +77,7 @@ class Day10: Day {
     
     override func part2() -> String {
         String(differences.split(separator: 3).map {
-            // Split by tiny jumps
+            // We're only interested in the number of consecutive 1's
             $0.count
         }.reduce(1) { intermediateResult, newValue in
             // We have a list of numbers 0, 1, 2, ..., n, n + 3
@@ -88,3 +88,4 @@ class Day10: Day {
         })
     }
 }
+
