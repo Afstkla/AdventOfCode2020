@@ -16,6 +16,7 @@ class Day7: Day {
     }
     
     var bagContains = [Bag: [Bag]]()
+    var containedInBag = [Bag: [Bag]]()
     
     override func prepareInput() {
         func getBag(from str: String) -> Bag {
@@ -48,6 +49,12 @@ class Day7: Day {
                     continue
                 }
                 
+                if containedInBag[outputBagBag] == nil {
+                    containedInBag[outputBagBag] = []
+                }
+                
+                containedInBag[outputBagBag]?.append(inputBag)
+                
                 outputBags.append(outputBagBag)
             }
             
@@ -58,7 +65,7 @@ class Day7: Day {
     func getOuter(bagName: String) -> [String] {
         var allOuterBags = [bagName]
         
-        bagContains.filter { $0.value.map { $0.name}.contains(bagName) }.map { $0.key }.forEach {
+        containedInBag.filter { $0.key.name == bagName }.map { $0.value }.flatMap { $0 }.forEach {
             allOuterBags.append(contentsOf: getOuter(bagName: $0.name))
         }
         

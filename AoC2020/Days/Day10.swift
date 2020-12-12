@@ -8,7 +8,7 @@
 import Foundation
 
 class Day10: Day {
-    override var dayIndex: Int { get { 9 } set {}}
+    override var dayIndex: Int { get { 10 } set {}}
 
     let test1 = """
     16
