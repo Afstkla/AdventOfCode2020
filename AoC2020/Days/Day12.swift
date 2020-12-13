@@ -65,6 +65,16 @@ class Day12: Day {
         return (east: coordinate.east + otherCoordinate.east * times, north: coordinate.north + otherCoordinate.north * times)
     }
     
+    func rotateLeft(coordinate: (east: Int, north: Int), withDegrees degrees: Int) -> (east: Int, north: Int) {
+        let leftRotation = (east: -coordinate.north, north: coordinate.east)
+        
+        if degrees == 90 {
+            return leftRotation
+        } else {
+            return rotateLeft(coordinate: leftRotation, withDegrees: degrees - 90)
+        }
+    }
+    
     override func part1() -> String {
         var heading = Heading.east
         var coordinate = (east: 0, north: 0)
@@ -92,16 +102,6 @@ class Day12: Day {
         }
         
         return String(abs(coordinate.east) + abs(coordinate.north))
-    }
-    
-    func rotateLeft(coordinate: (east: Int, north: Int), withDegrees degrees: Int) -> (east: Int, north: Int) {
-        let leftRotation = (east: -coordinate.north, north: coordinate.east)
-        
-        if degrees == 90 {
-            return leftRotation
-        } else {
-            return rotateLeft(coordinate: leftRotation, withDegrees: degrees - 90)
-        }
     }
     
     override func part2() -> String {

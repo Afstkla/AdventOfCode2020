@@ -19,7 +19,8 @@ import Foundation
 //Day9(inputFile: "input-9").solve()      // 177777905,   23463012
 //Day10(inputFile: "input-10").solve()    // 2080,        6908379398144
 //Day11(inputFile: "input-11").solve()    // 2113,        1865
-Day12(inputFile: "input-12").solve()
-//
+//Day12(inputFile: "input-12").solve()    // 1221,        59435
+Day13(inputFile: "input-13").solve()    // 2406,        
+//print()
 //print("\n\n======= TOTAL Metrics =======")
 //print("Total runtime in: \(Date().timeIntervalSince(startTime) * 1000)ms")

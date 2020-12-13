@@ -137,6 +137,8 @@
 		1DD185A7257A1AB900DE3EFB /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD185A6257A1AB900DE3EFB /* Day4.swift */; };
 		1DD185AA257A1B0A00DE3EFB /* input-4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DD185A9257A1AFE00DE3EFB /* input-4.txt */; };
 		1DE3FE5B2580BBE100051FDE /* input-9.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DE3FE5A2580BBCF00051FDE /* input-9.txt */; };
+		1DEF34C12586236D00450F31 /* input-13.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DEF34C02586236900450F31 /* input-13.txt */; };
+		1DEF34C42586245500450F31 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF34C32586245500450F31 /* Day13.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -146,6 +148,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1DEF34C12586236D00450F31 /* input-13.txt in CopyFiles */,
 				1DC927FC2584C8270088613A /* input-12.txt in CopyFiles */,
 				1DD02075258374760004D259 /* input-11.txt in CopyFiles */,
 				1D6335202582140D003BFE5A /* input-10.txt in CopyFiles */,
@@ -295,6 +298,8 @@
 		1DD185A6257A1AB900DE3EFB /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		1DD185A9257A1AFE00DE3EFB /* input-4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-4.txt"; sourceTree = "<group>"; };
 		1DE3FE5A2580BBCF00051FDE /* input-9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-9.txt"; sourceTree = "<group>"; };
+		1DEF34C02586236900450F31 /* input-13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-13.txt"; sourceTree = "<group>"; };
+		1DEF34C32586245500450F31 /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,6 +602,7 @@
 				1D63351E2582122F003BFE5A /* input-10.txt */,
 				1DD02074258374730004D259 /* input-11.txt */,
 				1DC927FB2584C8220088613A /* input-12.txt */,
+				1DEF34C02586236900450F31 /* input-13.txt */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -617,6 +623,7 @@
 				1D63351B25821228003BFE5A /* Day10.swift */,
 				1DD020772583747E0004D259 /* Day11.swift */,
 				1DC927F82584C6DA0088613A /* Day12.swift */,
+				1DEF34C32586245500450F31 /* Day13.swift */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -785,6 +792,7 @@
 				1D2FB4A7257F70DF0014A0E1 /* Day9.swift in Sources */,
 				1D213E7C25765D6E0012B9F3 /* UINavigationBarExtensions.swift in Sources */,
 				1D213E3725765D6E0012B9F3 /* SCNBoxExtensions.swift in Sources */,
+				1DEF34C42586245500450F31 /* Day13.swift in Sources */,
 				1D213E8325765D6E0012B9F3 /* UIGestureRecognizerExtensions.swift in Sources */,
 				1D213E6825765D6E0012B9F3 /* CGFloatExtensions.swift in Sources */,
 				1D213E3625765D6E0012B9F3 /* SCNSphereExtensions.swift in Sources */,
