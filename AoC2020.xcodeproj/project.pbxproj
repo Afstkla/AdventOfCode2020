@@ -136,6 +136,8 @@
 		1DD020782583747E0004D259 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD020772583747E0004D259 /* Day11.swift */; };
 		1DD185A7257A1AB900DE3EFB /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD185A6257A1AB900DE3EFB /* Day4.swift */; };
 		1DD185AA257A1B0A00DE3EFB /* input-4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DD185A9257A1AFE00DE3EFB /* input-4.txt */; };
+		1DDE5EED25875417002CEEA6 /* input-14.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DDE5EEC25875412002CEEA6 /* input-14.txt */; };
+		1DDE5EF02587544B002CEEA6 /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EEF2587544B002CEEA6 /* Day14.swift */; };
 		1DE3FE5B2580BBE100051FDE /* input-9.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DE3FE5A2580BBCF00051FDE /* input-9.txt */; };
 		1DEF34C12586236D00450F31 /* input-13.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DEF34C02586236900450F31 /* input-13.txt */; };
 		1DEF34C42586245500450F31 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF34C32586245500450F31 /* Day13.swift */; };
@@ -148,6 +150,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1DDE5EED25875417002CEEA6 /* input-14.txt in CopyFiles */,
 				1DEF34C12586236D00450F31 /* input-13.txt in CopyFiles */,
 				1DC927FC2584C8270088613A /* input-12.txt in CopyFiles */,
 				1DD02075258374760004D259 /* input-11.txt in CopyFiles */,
@@ -297,6 +300,8 @@
 		1DD020772583747E0004D259 /* Day11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11.swift; sourceTree = "<group>"; };
 		1DD185A6257A1AB900DE3EFB /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		1DD185A9257A1AFE00DE3EFB /* input-4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-4.txt"; sourceTree = "<group>"; };
+		1DDE5EEC25875412002CEEA6 /* input-14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-14.txt"; sourceTree = "<group>"; };
+		1DDE5EEF2587544B002CEEA6 /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
 		1DE3FE5A2580BBCF00051FDE /* input-9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-9.txt"; sourceTree = "<group>"; };
 		1DEF34C02586236900450F31 /* input-13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-13.txt"; sourceTree = "<group>"; };
 		1DEF34C32586245500450F31 /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
@@ -603,6 +608,7 @@
 				1DD02074258374730004D259 /* input-11.txt */,
 				1DC927FB2584C8220088613A /* input-12.txt */,
 				1DEF34C02586236900450F31 /* input-13.txt */,
+				1DDE5EEC25875412002CEEA6 /* input-14.txt */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 				1DD020772583747E0004D259 /* Day11.swift */,
 				1DC927F82584C6DA0088613A /* Day12.swift */,
 				1DEF34C32586245500450F31 /* Day13.swift */,
+				1DDE5EEF2587544B002CEEA6 /* Day14.swift */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -774,6 +781,7 @@
 				1D2FB4A1257F6EF90014A0E1 /* DayComputer.swift in Sources */,
 				1D213E8025765D6E0012B9F3 /* UIImageExtensions.swift in Sources */,
 				1D7BBE462578BE2A00E5C58C /* Day3.swift in Sources */,
+				1DDE5EF02587544B002CEEA6 /* Day14.swift in Sources */,
 				1D213E6F25765D6E0012B9F3 /* UISearchBarExtensions.swift in Sources */,
 				1D213E8425765D6E0012B9F3 /* UIWindowExtensions.swift in Sources */,
 				1D213E4925765D6E0012B9F3 /* NotificationCenterExtensions.swift in Sources */,

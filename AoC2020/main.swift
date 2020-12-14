@@ -7,7 +7,7 @@
 
 import Foundation
 
-//let startTime = Date()
+let startTime = Date()
 //Day1(inputFile: "input_day1").solve()   // 211899,      275765682
 //Day2(inputFile: "input_day2").solve()   // 600,         245
 //Day3(inputFile: "input-3").solve()      // 294,         5774564250
@@ -20,7 +20,8 @@ import Foundation
 //Day10(inputFile: "input-10").solve()    // 2080,        6908379398144
 //Day11(inputFile: "input-11").solve()    // 2113,        1865
 //Day12(inputFile: "input-12").solve()    // 1221,        59435
-Day13(inputFile: "input-13").solve()    // 2406,        
-//print()
-//print("\n\n======= TOTAL Metrics =======")
-//print("Total runtime in: \(Date().timeIntervalSince(startTime) * 1000)ms")
+//Day13(inputFile: "input-13").solve()    // 2406,        225850756401039
+Day14(inputFile: "input-14").solve()
+print()
+print("\n\n======= TOTAL Metrics =======")
+print("Total runtime in: \(Date().timeIntervalSince(startTime) * 1000)ms")
