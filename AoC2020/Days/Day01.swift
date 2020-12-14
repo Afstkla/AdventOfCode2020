@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day1: Day {
+class Day01: Day {
     override var dayIndex: Int { get { 1 } set {}}
     
     var numbers = [Int]()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day9: Day {
+class Day09: Day {
     override var dayIndex: Int { get { 9 } set {}}
     
     let testInput = """

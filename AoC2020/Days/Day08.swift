@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day8: DayComputer {
+class Day08: DayComputer {
     override var dayIndex: Int { get { 8 } set {}}
     
     let testStr = """

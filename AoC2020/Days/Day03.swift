@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day3: Day {
+class Day03: Day {
     override var dayIndex: Int { get { 3 } set {}}
     
     var puzzleGrid = [String]()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day6: Day {
+class Day06: Day {
     override var dayIndex: Int { get { 6 } set {}}
 
     override func part1() -> String {

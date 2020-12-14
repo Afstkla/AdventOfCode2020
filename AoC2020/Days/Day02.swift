@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day2: Day {
+class Day02: Day {
     override var dayIndex: Int { get { 2 } set {}}
     
     var lines = [String]()

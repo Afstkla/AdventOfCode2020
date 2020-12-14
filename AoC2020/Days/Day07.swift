@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day7: Day {
+class Day07: Day {
     override var dayIndex: Int { get { 7 } set {}}
     
     struct Bag: Hashable {

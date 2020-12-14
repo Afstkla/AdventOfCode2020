@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Day4: Day {
+class Day04: Day {
     override var dayIndex: Int { get { 4 } set {}}
     
     var passports = [String]()
