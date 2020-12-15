@@ -31,13 +31,13 @@ class Day15: Day {
     }
     
     override func part1() -> String {
-        for idx in nums.count..<2019 {
+        for idx in (nums.count + 1)..<2020 {
             if let lastIdx = nums[newNumAndIdx.num] {
                 nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: idx - lastIdx, idx: idx + 1)
+                newNumAndIdx = (num: idx - lastIdx - 1, idx: idx)
             } else {
                 nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: 0, idx: idx + 1)
+                newNumAndIdx = (num: 0, idx: idx)
             }
         }
         
@@ -45,13 +45,13 @@ class Day15: Day {
     }
     
     override func part2() -> String {
-        for idx in 2019..<29999999 {
+        for idx in 2020..<30000000 {
             if let lastIdx = nums[newNumAndIdx.num] {
                 nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: idx - lastIdx, idx: idx + 1)
+                newNumAndIdx = (num: idx - lastIdx - 1, idx: idx)
             } else {
                 nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: 0, idx: idx + 1)
+                newNumAndIdx = (num: 0, idx: idx)
             }
         }
         
