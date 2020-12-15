@@ -48,7 +48,7 @@ class Day15: Day {
         for idx in 2020..<30000000 {
             if let lastIdx = nums[nextNum] {
                 nums[nextNum] = idx
-                nextNum = idx - lastIdx - 1
+                nextNum = idx - lastIdx
             } else {
                 nums[nextNum] = idx
                 nextNum = 0
