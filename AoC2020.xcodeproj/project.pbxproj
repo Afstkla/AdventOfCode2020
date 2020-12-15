@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0D16FB25888A54002B7910 /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D16FA25888A54002B7910 /* Day15.swift */; };
+		1D0D16FE25888C53002B7910 /* input-15.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D0D16FD25888C4C002B7910 /* input-15.txt */; };
 		1D0D71FF2577634F00BF4D2E /* Day02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D71FE2577634F00BF4D2E /* Day02.swift */; };
 		1D213E2B25765D6E0012B9F3 /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D213DB525765D6D0012B9F3 /* NSColorExtensions.swift */; };
 		1D213E2C25765D6E0012B9F3 /* NSViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D213DB625765D6D0012B9F3 /* NSViewExtensions.swift */; };
@@ -150,6 +152,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1D0D16FE25888C53002B7910 /* input-15.txt in CopyFiles */,
 				1D363D5C258766120035B69C /* input-01.txt in CopyFiles */,
 				1D363D5D258766120035B69C /* input-02.txt in CopyFiles */,
 				1D363D5E258766120035B69C /* input-03.txt in CopyFiles */,
@@ -170,6 +173,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D0D16FA25888A54002B7910 /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
+		1D0D16FD25888C4C002B7910 /* input-15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-15.txt"; sourceTree = "<group>"; };
 		1D0D71FE2577634F00BF4D2E /* Day02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day02.swift; sourceTree = "<group>"; };
 		1D213DB525765D6D0012B9F3 /* NSColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
 		1D213DB625765D6D0012B9F3 /* NSViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensions.swift; sourceTree = "<group>"; };
@@ -609,6 +614,7 @@
 				1DC927FB2584C8220088613A /* input-12.txt */,
 				1DEF34C02586236900450F31 /* input-13.txt */,
 				1DDE5EEC25875412002CEEA6 /* input-14.txt */,
+				1D0D16FD25888C4C002B7910 /* input-15.txt */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				1DC927F82584C6DA0088613A /* Day12.swift */,
 				1DEF34C32586245500450F31 /* Day13.swift */,
 				1DDE5EEF2587544B002CEEA6 /* Day14.swift */,
+				1D0D16FA25888A54002B7910 /* Day15.swift */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -715,6 +722,7 @@
 				1D213E4225765D6E0012B9F3 /* SKNodeExtensions.swift in Sources */,
 				1D213E4E25765D6E0012B9F3 /* CalendarExtensions.swift in Sources */,
 				1DCD3C54257E4EFF00FBA5CA /* Day08.swift in Sources */,
+				1D0D16FB25888A54002B7910 /* Day15.swift in Sources */,
 				1D213E6125765D6E0012B9F3 /* FloatingPointExtensions.swift in Sources */,
 				1D213E8525765D6E0012B9F3 /* UILabelExtensions.swift in Sources */,
 				1D213E4A25765D6E0012B9F3 /* URLExtensions.swift in Sources */,
