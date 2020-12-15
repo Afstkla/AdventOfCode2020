@@ -22,7 +22,7 @@ let startTime = Date()
 //Day12(inputFile: "input-12").solve()    // 1221,            59435
 //Day13(inputFile: "input-13").solve()    // 2406,            225850756401039
 //Day14(inputFile: "input-14").solve()    // 12610010960049,  207136023103
-Day15(inputFile: "input-15").solve()    //
+Day15(inputFile: "input-15").solve()    // 1259,            689
 print()
 print("\n\n======= TOTAL Metrics =======")
 print("Total runtime in: \(Date().timeIntervalSince(startTime) * 1000)ms")

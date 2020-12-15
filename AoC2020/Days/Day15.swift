@@ -11,7 +11,7 @@ class Day15: Day {
     override var dayIndex: Int { get { 15 } set {} }
     
     var nums = [Int: Int]()
-    var newNumAndIdx: (num: Int, idx: Int) = (-1, -1)
+    var nextNum = -1
     var prevNum = 0
     
     let test = "0,3,6"
@@ -19,42 +19,42 @@ class Day15: Day {
     override func prepareInput() {
         for (idx, num) in inputString.split(separator: ",").enumerated() {
             if let num = Int(num) {
-                if newNumAndIdx.num == -1 {
-                    newNumAndIdx = (num: num, idx: idx)
+                if nextNum == -1 {
+                    nextNum = num
                     continue
                 }
                 
-                nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: num, idx: idx)
+                nums[nextNum] = idx
+                nextNum = num
             }
         }
     }
     
     override func part1() -> String {
         for idx in (nums.count + 1)..<2020 {
-            if let lastIdx = nums[newNumAndIdx.num] {
-                nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: idx - lastIdx - 1, idx: idx)
+            if let lastIdx = nums[nextNum] {
+                nums[nextNum] = idx
+                nextNum = idx - lastIdx
             } else {
-                nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: 0, idx: idx)
+                nums[nextNum] = idx
+                nextNum = 0
             }
         }
         
-        return String(newNumAndIdx.num)
+        return String(nextNum)
     }
     
     override func part2() -> String {
         for idx in 2020..<30000000 {
-            if let lastIdx = nums[newNumAndIdx.num] {
-                nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: idx - lastIdx - 1, idx: idx)
+            if let lastIdx = nums[nextNum] {
+                nums[nextNum] = idx
+                nextNum = idx - lastIdx - 1
             } else {
-                nums[newNumAndIdx.num] = newNumAndIdx.idx
-                newNumAndIdx = (num: 0, idx: idx)
+                nums[nextNum] = idx
+                nextNum = 0
             }
         }
         
-        return String(newNumAndIdx.num)
+        return String(nextNum)
     }
 }
