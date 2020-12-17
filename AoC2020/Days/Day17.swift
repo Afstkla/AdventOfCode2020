@@ -100,7 +100,7 @@ class Day17: Day {
     }
     
     override func part2() -> String {
-        for i in 0..<6 {
+        for _ in 0..<6 {
             var localGrid = Set<XYZW>()
             var checkedCoordinates = [XYZW]()
             

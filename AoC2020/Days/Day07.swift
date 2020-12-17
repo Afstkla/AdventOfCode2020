@@ -20,7 +20,7 @@ class Day07: Day {
     
     override func prepareInput() {
         func getBag(from str: String) -> Bag {
-            let bagStuff = str.trimmed.split(separator: " ")
+            let bagStuff = str.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: " ")
             
             var cnt: Int? = nil
             if let count = Int(bagStuff[0]) {
@@ -29,12 +29,14 @@ class Day07: Day {
             
             let bagName = String(bagStuff[cnt == nil ? 0 : 1] + " " + bagStuff[cnt == nil ? 1 : 2])
             
-            return Bag(name: bagName.trimmed, count: cnt)
+            return Bag(name: bagName.trimmingCharacters(in: .whitespacesAndNewlines), count: cnt)
         }
         
-        let bagRows = inputString.lines()
-        
-        for bagRow in bagRows {
+        for bagRow in inputString.components(separatedBy: .newlines) {
+            if bagRow == "" {
+                continue
+            }
+            
             let bagStuff = bagRow.components(separatedBy: "contain")
             
             let inputBag = getBag(from: bagStuff[0])

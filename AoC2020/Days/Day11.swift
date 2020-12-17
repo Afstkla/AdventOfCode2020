@@ -34,7 +34,7 @@ class Day11: Day {
     var inputLength = 0
     
     override func prepareInput() {
-        floorPlan = inputString.trimmed.components(separatedBy: .newlines).map({ $0.map({ Tile(rawValue: $0)! }) })
+        floorPlan = inputString.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines).map({ $0.map({ Tile(rawValue: $0)! }) })
         lineLength = floorPlan[0].count
         inputLength = floorPlan.count
     }

@@ -14,7 +14,7 @@ class Day06: Day {
         String(inputString.components(separatedBy: ["\n\n"]).map {
             String($0).replacingOccurrences(of: "\n", with: "")
         }.reduce(0) {
-            $0 + Set($1.charactersArray).count
+            $0 + Set($1).count
         })
     }
     

@@ -94,3 +94,9 @@ extension Array where Element == Int {
         return combinations
     }
 }
+
+extension MutableCollection where Element: Numeric {
+    func sum() -> Element {
+        return self.reduce(0, +)
+    }
+}
