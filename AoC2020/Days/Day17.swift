@@ -54,11 +54,17 @@ class Day17: Day {
     override func part1() -> String {
         for _ in 0..<6 {
             var localGrid = Set<XYZ>()
+            var checkedCoordinates = [XYZ]()
             
             for coord in grid {
                 for xx in -1...1 {
                     for yy in -1...1 {
                         for zz in -1...1 {
+                            if checkedCoordinates.contains(where: { XYZ(x: coord.x + xx, y: coord.y + yy, z: coord.z + zz) == $0 }) {
+                                continue
+                            }
+                            checkedCoordinates.append(XYZ(x: coord.x + xx, y: coord.y + yy, z: coord.z + zz))
+                            
                             var counter = 0
                             
                             for x in -1...1 {
@@ -96,12 +102,18 @@ class Day17: Day {
     override func part2() -> String {
         for i in 0..<6 {
             var localGrid = Set<XYZW>()
+            var checkedCoordinates = [XYZW]()
             
             for coord in xyzwgrid {
                 for xx in -1...1 {
                     for yy in -1...1 {
                         for zz in -1...1 {
                             for ww in -1...1 {
+                                if checkedCoordinates.contains(where: { XYZW(x: coord.x + xx, y: coord.y + yy, z: coord.z + zz, w: coord.w + ww) == $0 }) {
+                                    continue
+                                }
+                                checkedCoordinates.append(XYZW(x: coord.x + xx, y: coord.y + yy, z: coord.z + zz, w: coord.w + ww))
+                                
                                 var counter = 0
                                 
                                 for x in -1...1 {
@@ -134,7 +146,6 @@ class Day17: Day {
             }
             
             xyzwgrid = localGrid
-            print("iteration: \(i)")
         }
     
         return String(xyzwgrid.count)
