@@ -90,8 +90,6 @@ class Day19: Day {
         }
         
         testLines = inputParts[1].lines()
-        
-        print(rules[0]!)
     }
     
     override func part1() -> String {
