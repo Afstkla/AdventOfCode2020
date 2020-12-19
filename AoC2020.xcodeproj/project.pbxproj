@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0B7F32258E142300651EB3 /* input-19.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D0B7F31258E141A00651EB3 /* input-19.txt */; };
 		1D0D16FB25888A54002B7910 /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D16FA25888A54002B7910 /* Day15.swift */; };
 		1D0D16FE25888C53002B7910 /* input-15.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D0D16FD25888C4C002B7910 /* input-15.txt */; };
 		1D0D71FF2577634F00BF4D2E /* Day02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D71FE2577634F00BF4D2E /* Day02.swift */; };
@@ -62,6 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1D0B7F32258E142300651EB3 /* input-19.txt in CopyFiles */,
 				1D1DE34F258C9ACC00D28000 /* input-18.txt in CopyFiles */,
 				1DA0F996258B49AE0070D53A /* input-17.txt in CopyFiles */,
 				1D3C22C6258A783D00A5A9D9 /* input-16.txt in CopyFiles */,
@@ -86,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D0B7F31258E141A00651EB3 /* input-19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-19.txt"; sourceTree = "<group>"; };
 		1D0D16FA25888A54002B7910 /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
 		1D0D16FD25888C4C002B7910 /* input-15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-15.txt"; sourceTree = "<group>"; };
 		1D0D71FE2577634F00BF4D2E /* Day02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day02.swift; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 				1D3C22C5258A783500A5A9D9 /* input-16.txt */,
 				1DA0F991258B49840070D53A /* input-17.txt */,
 				1D1DE34E258C9AC200D28000 /* input-18.txt */,
+				1D0B7F31258E141A00651EB3 /* input-19.txt */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
