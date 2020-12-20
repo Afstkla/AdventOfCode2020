@@ -120,9 +120,20 @@ class Day20: Day {
     ..#.###...
     """
     
+    enum Orientation {
+        case left
+        case right
+        case top
+        case bottom
+        case leftInverse
+        case rightInverse
+        case topInverse
+        case bottomInverse
+    }
+    
     var tiles: [Int: [String]] = [:]
-    var tileEdges: [Int: [Int]] = [:]
-    var tileMatches: [Int: [Int]] = [:]
+    var tileEdges: [Int: [(edgeValue: Int, edgeOrientation: Orientation)]] = [:]
+    var tileMatches: [Int: [(otherTile: Int, edgeOrientation: Orientation)]] = [:]
     
     func getInt(forTileString tileString: String) -> Int {
         return tileString.enumerated().reduce(0) { $0 | (($1.element == "#" ? 1 : 0) << $1.offset) }
@@ -143,18 +154,18 @@ class Day20: Day {
         for tile in tiles {
             tileEdges[tile.key] = []
             
-            tileEdges[tile.key]?.append(getInt(forTileString: tile.value.first!))
-            tileEdges[tile.key]?.append(getInt(forTileString: tile.value.last!))
-            tileEdges[tile.key]?.append(getInt(forTileString: String(tile.value.first!.reversed())))
-            tileEdges[tile.key]?.append(getInt(forTileString: String(tile.value.last!.reversed())))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: tile.value.first!), edgeOrientation: .top))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: tile.value.last!), edgeOrientation: .bottom))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: String(tile.value.first!.reversed())), edgeOrientation: .topInverse))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: String(tile.value.last!.reversed())), edgeOrientation: .bottomInverse))
             
             let leftSide = tile.value.map { $0[0] }.compactMap { $0 }
-            tileEdges[tile.key]?.append(getInt(forTileString: String(leftSide)))
-            tileEdges[tile.key]?.append(getInt(forTileString: String(leftSide.reversed())))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: String(leftSide)), edgeOrientation: .left))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: String(leftSide.reversed())), edgeOrientation: .leftInverse))
             
             let rightSide = tile.value.map { $0[$0.count - 1] }.compactMap { $0 }
-            tileEdges[tile.key]?.append(getInt(forTileString: String(rightSide)))
-            tileEdges[tile.key]?.append(getInt(forTileString: String(rightSide.reversed())))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: String(rightSide)), edgeOrientation: .right))
+            tileEdges[tile.key]?.append((edgeValue: getInt(forTileString: String(rightSide.reversed())), edgeOrientation: .rightInverse))
         }
     }
     
@@ -165,11 +176,11 @@ class Day20: Day {
             let myEdges = tileEdges[tile.key]!
             
             for otherTile in tiles where tile.key != otherTile.key {
-                let otherEdges = tileEdges[otherTile.key]!
+                let otherEdges = tileEdges[otherTile.key]!.map { $0.edgeValue }
                 
                 for edge in myEdges {
-                    if otherEdges.contains(edge) {
-                        tileMatches[tile.key]?.append(otherTile.key)
+                    if otherEdges.contains(edge.edgeValue) {
+                        tileMatches[tile.key]?.append((otherTile: otherTile.key, edgeOrientation: edge.edgeOrientation))
                         break
                     }
                 }
