@@ -26,8 +26,8 @@ let startTime = Date()
 //Day16(inputFile: "input-16").solve()    // 22000,             410460648673
 //Day17(inputFile: "input-17").solve()    // 223,               1884
 //Day18(inputFile: "input-18").solve()    // 8298263963837,     145575710203332
-Day19(inputFile: "input-19").solve()    // 285,                 
-//Day20(inputFile: "input-20").solve()    //
+//Day19(inputFile: "input-19").solve()    // 285,               411
+Day20(inputFile: "input-20").solve()    //
 //Day21(inputFile: "input-21").solve()    //
 //Day22(inputFile: "input-22").solve()    //
 //Day23(inputFile: "input-23").solve()    //

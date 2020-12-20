@@ -26,6 +26,7 @@
 		1D3C22C6258A783D00A5A9D9 /* input-16.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D3C22C5258A783500A5A9D9 /* input-16.txt */; };
 		1D63351C25821228003BFE5A /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D63351B25821228003BFE5A /* Day10.swift */; };
 		1D6335202582140D003BFE5A /* input-10.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D63351E2582122F003BFE5A /* input-10.txt */; };
+		1D662798258F7107000D714F /* input-20.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D662797258F7100000D714F /* input-20.txt */; };
 		1D6B5D5725764F0600544B3C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D5625764F0600544B3C /* main.swift */; };
 		1D6B5D6C2576534E00544B3C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6B2576534E00544B3C /* Day.swift */; };
 		1D6B5D6F257653F100544B3C /* Day01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B5D6E257653F100544B3C /* Day01.swift */; };
@@ -63,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				1D662798258F7107000D714F /* input-20.txt in CopyFiles */,
 				1D0B7F32258E142300651EB3 /* input-19.txt in CopyFiles */,
 				1D1DE34F258C9ACC00D28000 /* input-18.txt in CopyFiles */,
 				1DA0F996258B49AE0070D53A /* input-17.txt in CopyFiles */,
@@ -107,6 +109,7 @@
 		1D3C22C5258A783500A5A9D9 /* input-16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-16.txt"; sourceTree = "<group>"; };
 		1D63351B25821228003BFE5A /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
 		1D63351E2582122F003BFE5A /* input-10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-10.txt"; sourceTree = "<group>"; };
+		1D662797258F7100000D714F /* input-20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "input-20.txt"; sourceTree = "<group>"; };
 		1D6B5D5325764F0600544B3C /* AoC2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AoC2020; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6B5D5625764F0600544B3C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1D6B5D6B2576534E00544B3C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -206,6 +209,7 @@
 				1DA0F991258B49840070D53A /* input-17.txt */,
 				1D1DE34E258C9AC200D28000 /* input-18.txt */,
 				1D0B7F31258E141A00651EB3 /* input-19.txt */,
+				1D662797258F7100000D714F /* input-20.txt */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
