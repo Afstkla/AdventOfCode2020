@@ -212,13 +212,19 @@ class Day20: Day {
     }
     
     override func part1() -> String {
+        var localEdges: [Int: [Int]] = [:]
+        
+        for (tileID, _) in tiles {
+            localEdges[tileID] = edges(forTileID: tileID)
+        }
+        
         for tile in tiles {
             tileMatches[tile.key] = []
             
-            let myEdges = edges(forTileID: tile.key)
+            let myEdges = localEdges[tile.key]!
             
             for otherTile in tiles where tile.key != otherTile.key {
-                let otherEdges = edges(forTileID: otherTile.key)
+                let otherEdges = localEdges[otherTile.key]!
                 
                 for edge in myEdges {
                     if otherEdges.contains(edge) {
@@ -235,8 +241,6 @@ class Day20: Day {
     }
     
     override func part2() -> String {
-        // 2301 too high
-        // 2271 too high
         // Step 1: Choose a (random) starting corner
         var solutionGrid: [[Int]] = []
         let corners = tileMatches.filter { $0.value.count == 2 }
