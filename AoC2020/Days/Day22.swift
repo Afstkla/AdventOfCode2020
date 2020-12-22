@@ -29,44 +29,42 @@ class Day22: Day {
         var localDeckOne = deckOne
         var localDeckTwo = deckTwo
         
-        var previousRoundsDecks: Set<[Int]> = Set()
+        var previousRoundsDecks: Set<[[Int]]> = Set()
         
         while !localDeckOne.isEmpty && !localDeckTwo.isEmpty {
-            if previousRoundsDecks.contains(localDeckOne + [-1] + localDeckTwo) {
+            if previousRoundsDecks.contains([localDeckOne, localDeckTwo]) {
                 return (winner: .playerOne, deck: playerOneDeck)
             } else {
-                previousRoundsDecks.insert(localDeckOne + [-1] + localDeckTwo)
+                previousRoundsDecks.insert([localDeckOne, localDeckTwo])
             }
 
-            if roundWinner(deckOne: localDeckOne, deckTwo: localDeckTwo) == .playerOne {
-                localDeckOne.append(contentsOf: [localDeckOne[0], localDeckTwo[0]])
-            } else {
-                localDeckTwo.append(contentsOf: [localDeckTwo[0], localDeckOne[0]])
-            }
-            
-            localDeckOne.removeFirst()
-            localDeckTwo.removeFirst()
+            playRound(deckOne: &localDeckOne, deckTwo: &localDeckTwo)
         }
         
         return localDeckOne.isEmpty ? (winner: .playerTwo, deck: localDeckTwo) : (winner: .playerOne, deck: localDeckOne)
     }
     
-    func roundWinner(deckOne: [Int], deckTwo: [Int]) -> Winner {
-        var localDeckOne = deckOne
-        var localDeckTwo = deckTwo
+    @discardableResult func playRound(deckOne: inout [Int], deckTwo: inout [Int]) -> Winner {
+        let playerOneCard = deckOne.removeFirst()
+        let playerTwoCard = deckTwo.removeFirst()
         
-        let playerOneCard = localDeckOne.removeFirst()
-        let playerTwoCard = localDeckTwo.removeFirst()
+        var winner: Winner
         
-        if playerOneCard <= localDeckOne.count && playerTwoCard <= localDeckTwo.count {
-            return playGame(deckOne: [Int](localDeckOne[0..<playerOneCard]), deckTwo: [Int](localDeckTwo[0..<playerTwoCard])).winner
-        }
-        
-        if playerOneCard > playerTwoCard {
-            return .playerOne
+        if playerOneCard <= deckOne.count && playerTwoCard <= deckTwo.count {
+            winner = playGame(deckOne: [Int](deckOne[0..<playerOneCard]), deckTwo: [Int](deckTwo[0..<playerTwoCard])).winner
+        } else if playerOneCard > playerTwoCard {
+            winner = .playerOne
         } else {
-            return .playerTwo
+            winner = .playerTwo
         }
+        
+        if winner == .playerOne {
+            deckOne.append(contentsOf: [playerOneCard, playerTwoCard])
+        } else {
+            deckTwo.append(contentsOf: [playerTwoCard, playerOneCard])
+        }
+        
+        return winner
     }
     
     override func part1() -> String {
