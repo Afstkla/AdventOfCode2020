@@ -16,8 +16,8 @@ class Day22: Day {
     override func prepareInput() {
         let decks = inputString.trimmed().components(separatedBy: "\n\n")
         
-        playerOneDeck = decks[0].components(separatedBy: .newlines)[1...].map { Int($0)! }
-        playerTwoDeck = decks[1].components(separatedBy: .newlines)[1...].map { Int($0)! }
+        playerOneDeck = decks[0].lines()[1...].map { Int($0)! }
+        playerTwoDeck = decks[1].lines()[1...].map { Int($0)! }
     }
     
     enum Winner {
@@ -29,18 +29,16 @@ class Day22: Day {
         var localDeckOne = deckOne
         var localDeckTwo = deckTwo
         
-        var previousRoundsDeckOne: [[Int]] = []
-        var previousRoundsDeckTwo: [[Int]] = []
+        var previousRoundsDecks: Set<[Int]> = Set()
         
         while !localDeckOne.isEmpty && !localDeckTwo.isEmpty {
-            if previousRoundsDeckOne.firstIndex(of: localDeckOne) == previousRoundsDeckTwo.firstIndex(of: localDeckTwo) && previousRoundsDeckOne.firstIndex(of: localDeckOne) != nil {
+            if previousRoundsDecks.contains(localDeckOne + [-1] + localDeckTwo) {
                 return (winner: .playerOne, deck: playerOneDeck)
             } else {
-                previousRoundsDeckOne.append(localDeckOne)
-                previousRoundsDeckTwo.append(localDeckTwo)
+                previousRoundsDecks.insert(localDeckOne + [-1] + localDeckTwo)
             }
 
-            if playRound(deckOne: localDeckOne, deckTwo: localDeckTwo) == .playerOne {
+            if roundWinner(deckOne: localDeckOne, deckTwo: localDeckTwo) == .playerOne {
                 localDeckOne.append(contentsOf: [localDeckOne[0], localDeckTwo[0]])
             } else {
                 localDeckTwo.append(contentsOf: [localDeckTwo[0], localDeckOne[0]])
@@ -53,7 +51,7 @@ class Day22: Day {
         return localDeckOne.isEmpty ? (winner: .playerTwo, deck: localDeckTwo) : (winner: .playerOne, deck: localDeckOne)
     }
     
-    func playRound(deckOne: [Int], deckTwo: [Int]) -> Winner {
+    func roundWinner(deckOne: [Int], deckTwo: [Int]) -> Winner {
         var localDeckOne = deckOne
         var localDeckTwo = deckTwo
         

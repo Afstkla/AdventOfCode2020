@@ -196,7 +196,6 @@
 		1DA153C9257E16D8007B7435 /* Inputs */ = {
 			isa = PBXGroup;
 			children = (
-				1DA305882591B6E4004D599D /* input-22.txt */,
 				1D363D5B258766090035B69C /* input-01.txt */,
 				1D363D5A258766090035B69C /* input-02.txt */,
 				1D363D58258766090035B69C /* input-03.txt */,
@@ -218,6 +217,7 @@
 				1D0B7F31258E141A00651EB3 /* input-19.txt */,
 				1D662797258F7100000D714F /* input-20.txt */,
 				1DBA6475259096D700C3C9BE /* input-21.txt */,
+				1DA305882591B6E4004D599D /* input-22.txt */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
