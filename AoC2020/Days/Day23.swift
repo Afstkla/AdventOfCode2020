@@ -12,13 +12,15 @@ final class Day23: Day {
     
     var cups: [Int] = []
     var cupsB: LinkedList<Int>
+    var indexesOfCups: [Int: Node<Int>] = [:]
     
-    let test = "389125467"
+    let test = "853192647"
     let bNumberOfValues = 1_000_000
     
     override init(inputFile: String) {
         let inputNumbers = test.trimmed().split(by: 1).map { Int($0)! }
         cupsB = LinkedList<Int>(headValue: inputNumbers[0])
+        indexesOfCups[inputNumbers[0] - 1] = cupsB.head
         
         for num in inputNumbers {
             cups.append(num)
@@ -26,10 +28,12 @@ final class Day23: Day {
         
         for num in inputNumbers[1...] {
             cupsB.append(value: num)
+            indexesOfCups[num - 1] = cupsB.head.previous
         }
         
         for i in cups.count..<bNumberOfValues {
             cupsB.append(value: i + 1)
+            indexesOfCups[i] = cupsB.head.previous
         }
         
         super.init(inputFile: inputFile)
@@ -70,14 +74,8 @@ final class Day23: Day {
     }
     
     override func part2() -> String {
-        var percent = 0
         let max = 10_000_000
-        for move in 0..<max {
-            if move / (max / 100) != percent {
-                percent = move / (max / 100)
-                print("\(percent)%")
-            }
-            
+        for _ in 0..<max {
             let takenCups = cupsB.remove(n: 3, after: cupsB.head)
             
             let currentCupValue = cupsB.head.value
@@ -96,9 +94,14 @@ final class Day23: Day {
             
             let searchValue = searchValues.filter { $0 < currentCupValue && $0 > 0 }.max() ?? searchValues.max()!
             
-            let insertAfterNode: Node<Int>! = cupsB.nodeWithValue(searchValue)
+            var insertAfterNode: Node<Int> = indexesOfCups[searchValue - 1]!
+            indexesOfCups[takenCupValues[0] - 1] = cupsB.insert(value: takenCupValues[0], after: insertAfterNode)
             
-            cupsB.insert(n: 3, nodes: takenCups, after: insertAfterNode)
+            insertAfterNode = takenCups
+            for i in 1...2 {
+                indexesOfCups[takenCupValues[i] - 1] = cupsB.insert(value: takenCupValues[i], after: indexesOfCups[takenCupValues[i - 1] - 1]!)
+                insertAfterNode = insertAfterNode.next
+            }
             
             cupsB.head = cupsB.head.next
         }
@@ -162,12 +165,14 @@ public final class LinkedList<T>: CustomStringConvertible where T: Comparable {
         head.previous = newNode
     }
     
-    public func insert(value: T, after node: Node<T>) {
+    public func insert(value: T, after node: Node<T>) -> Node<T> {
         let newNode = Node(value: value, prev: node, next: node.next)
         nodeRefList.append(newNode)
         
         node.next.previous = newNode
         node.next = newNode
+        
+        return newNode
     }
     
     public func insert(n: Int, nodes: Node<T>, after node: Node<T>) {
