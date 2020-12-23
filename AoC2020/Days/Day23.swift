@@ -11,20 +11,32 @@ final class Day23: Day {
     override var dayIndex: Int { get { 23 } set {} }
     
     var cups: [Int] = []
-    var cupsB = LinkedList<Int>()
+    var cupsB: LinkedList<Int>
     
     let test = "389125467"
     let bNumberOfValues = 1_000_000
     
-    override func prepareInput() {
-        test.trimmed().split(by: 1).map { Int($0)! }.forEach {
-            cups.append($0)
-            cupsB.append(value: $0)
+    override init(inputFile: String) {
+        let inputNumbers = test.trimmed().split(by: 1).map { Int($0)! }
+        cupsB = LinkedList<Int>(headValue: inputNumbers[0])
+        
+        for num in inputNumbers {
+            cups.append(num)
+        }
+        
+        for num in inputNumbers[1...] {
+            cupsB.append(value: num)
         }
         
         for i in cups.count..<bNumberOfValues {
             cupsB.append(value: i + 1)
         }
+        
+        super.init(inputFile: inputFile)
+    }
+    
+    override func prepareInput() {
+        
     }
     
     override func part1() -> String {
@@ -59,18 +71,18 @@ final class Day23: Day {
     
     override func part2() -> String {
         var percent = 0
-        let max = 1000
+        let max = 10_000_000
         for move in 0..<max {
             if move / (max / 100) != percent {
                 percent = move / (max / 100)
                 print("\(percent)%")
             }
             
-            let takenCups = cupsB.remove(n: 3, after: cupsB.head!)
+            let takenCups = cupsB.remove(n: 3, after: cupsB.head)
             
-            let currentCupValue = cupsB.head!.value
+            let currentCupValue = cupsB.head.value
             
-            let takenCupValues = [takenCups.value, takenCups.next!.value, takenCups.next!.next!.value]
+            let takenCupValues = [takenCups.value, takenCups.next.value, takenCups.next.next.value]
             
             let searchValues = [
                 currentCupValue - 1,
@@ -88,14 +100,14 @@ final class Day23: Day {
             
             cupsB.insert(n: 3, nodes: takenCups, after: insertAfterNode)
             
-            cupsB.head = cupsB.head!.next
+            cupsB.head = cupsB.head.next
         }
         
-        while cupsB.head!.value != 1 {
-            cupsB.head = cupsB.head!.next
+        while cupsB.head.value != 1 {
+            cupsB.head = cupsB.head.next
         }
         
-        return String(cupsB.head!.next!.value * cupsB.head!.next!.next!.value)
+        return String(cupsB.head.next.value * cupsB.head.next.next.value)
     }
 }
 
@@ -125,112 +137,84 @@ extension Array where Element == Int {
 
 /// Adapted from https://www.raywenderlich.com/947-swift-algorithm-club-swift-linked-list-data-structure
 public final class LinkedList<T>: CustomStringConvertible where T: Comparable {
-    fileprivate var head: Node<T>?
+    fileprivate var head: Node<T>
+    
+    init(headValue: T) {
+        let newNode = Node(value: headValue)
+        nodeRefList.append(newNode)
+        
+        head = newNode
+        head.previous = head
+        head.next = head
+    }
     
     var nodeRefList = [Node<T>]()
-    
-    public var isEmpty: Bool {
-        return head == nil
-    }
     
     public var first: Node<T>? {
         return head
     }
     
     public func append(value: T) {
-        let newNode = Node(value: value)
-        if let headNode = head {
-            newNode.previous = headNode.previous
-            newNode.next = headNode
-            
-            headNode.previous!.next = newNode
-            headNode.previous = newNode
-        } else {
-            head = newNode
-            
-            head!.previous = head
-            head!.next = head
-        }
+        let newNode = Node(value: value, prev: head.previous, next: head)
         nodeRefList.append(newNode)
+        
+        head.previous.next = newNode
+        head.previous = newNode
     }
     
     public func insert(value: T, after node: Node<T>) {
-        let newNode = Node(value: value)
-        
-        node.next!.previous = newNode
-        newNode.next = node.next
-        newNode.previous = node
-        node.next = newNode
+        let newNode = Node(value: value, prev: node, next: node.next)
         nodeRefList.append(newNode)
+        
+        node.next.previous = newNode
+        node.next = newNode
     }
     
     public func insert(n: Int, nodes: Node<T>, after node: Node<T>) {
-        let previouslyNextNode = node.next
+        let previouslyNextNode = node.next!
         
         var lastNodeToAppend = nodes
         for _ in 0..<(n - 1) {
-            lastNodeToAppend = lastNodeToAppend.next!
+            lastNodeToAppend = lastNodeToAppend.next
         }
         
-        previouslyNextNode!.previous = lastNodeToAppend
+        previouslyNextNode.previous = lastNodeToAppend
         lastNodeToAppend.next = previouslyNextNode
         node.next = nodes
         nodes.previous = node
     }
     
     public func nodeWithValue(_ value: T) -> Node<T>? {
-        var ref: Unmanaged<Node> = Unmanaged.passUnretained(head!.next!)
+        var ref: Unmanaged<Node> = Unmanaged.passUnretained(head)
+        var next = ref._withUnsafeGuaranteedRef({ $0.next })
         
-        while let next = ref._withUnsafeGuaranteedRef({ $0.next }) {
-            if next.value == value {
+        while next != head {
+            if next!.value == value {
                 return next
             }
-            ref = Unmanaged.passUnretained(next)
+            ref = Unmanaged.passUnretained(next!)
+            next = ref._withUnsafeGuaranteedRef({ $0.next })
         }
         return nil
     }
     
-    public func removeAll() {
-        head = nil
-    }
-    
-    public func remove(node: Node<T>) -> T {
-        let prev = node.previous
-        let next = node.next
-        
-        if let prev = prev {
-            prev.next = next
-        } else {
-            head = next
-        }
-        next!.previous = prev
-        
-        node.previous = nil
-        node.next = nil
-        
-        return node.value
-    }
-    
     public func remove(n: Int, after node: Node<T>) -> Node<T> {
-        let nodes = node.next
+        let nodes = node.next!
         
         var firstNotToRemove: Node<T> = node
         for _ in 0...n {
-            firstNotToRemove = firstNotToRemove.next!
+            firstNotToRemove = firstNotToRemove.next
         }
         
         firstNotToRemove.previous = node
         node.next = firstNotToRemove
         
-        return nodes!
+        return nodes
     }
     
     public var description: String {
-        if head == nil {
-            return "empty"
-        }
-        var desc = "\(head!) --> "
-        var node = head!.next
+        var desc = "\(head) --> "
+        var node = head.next
         while node != head {
             desc.append("\(node!) --> ")
             node = node!.next
@@ -250,6 +234,12 @@ public final class Node<T>: CustomStringConvertible, Equatable where T: Comparab
     
     init(value: T) {
         self.value = value
+    }
+    
+    init(value: T, prev: Node<T>, next: Node<T>) {
+        self.value = value
+        self.previous = prev
+        self.next = next
     }
     
     public var description: String {
