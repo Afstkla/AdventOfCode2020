@@ -11,14 +11,14 @@ final class Day23: Day {
     override var dayIndex: Int { get { 23 } set {} }
     
     var cups: [Int] = []
-    var cupsB: LinkedList<Int>
+    var cupsB = LinkedList<Int>(headValue: -1)
     var indexesOfCups: [Int: Node<Int>] = [:]
     
-    let test = "853192647"
+    let test = "389125467"
     let bNumberOfValues = 1_000_000
     
-    override init(inputFile: String) {
-        let inputNumbers = test.trimmed().split(by: 1).map { Int($0)! }
+    override func prepareInput() {
+        let inputNumbers = inputString.trimmed().split(by: 1).map { Int($0)! }
         cupsB = LinkedList<Int>(headValue: inputNumbers[0])
         indexesOfCups[inputNumbers[0] - 1] = cupsB.head
         
@@ -35,12 +35,6 @@ final class Day23: Day {
             cupsB.append(value: i + 1)
             indexesOfCups[i] = cupsB.head.previous
         }
-        
-        super.init(inputFile: inputFile)
-    }
-    
-    override func prepareInput() {
-        
     }
     
     override func part1() -> String {
