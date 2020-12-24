@@ -30,8 +30,8 @@ let startTime = Date()
 //Day20(inputFile: "input-20").solve()    // 5775714912743,     1836
 //Day21(inputFile: "input-21").solve()    // 2423,              jzzjz,bxkrd,pllzxb,gjddl,xfqnss,dzkb,vspv,dxvsp
 //Day22(inputFile: "input-22").solve()    // 33473,             31793
-Day23(inputFile: "input-23").solve()    // 97624853,            
-//Day24(inputFile: "input-24").solve()    //
+//Day23(inputFile: "input-23").solve()    // 97624853,          664642452305
+Day24(inputFile: "input-24").solve()    //
 //Day25(inputFile: "input-25").solve()    //
 print()
 print("\n\n======= TOTAL Metrics =======")
